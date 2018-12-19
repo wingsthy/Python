@@ -19,7 +19,7 @@ def server():
     def send_sth(conn):
         while True:
             try:
-                sth=input('say something:\n')
+                sth=raw_input('say something:\n')
                 conn.sendall(sth.encode('utf-8'))
             except ConnectionError:
                 print('connect error')
