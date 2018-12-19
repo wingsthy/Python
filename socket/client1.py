@@ -26,6 +26,8 @@ class client():
     def send_sth(self):
         while True:
             sth=raw_input('say something:\n')
+            if not sth or sth =='exit':
+                break
             try:
                 self.s.sendall(sth.encode('utf-8'))
             except ConnectionError:
