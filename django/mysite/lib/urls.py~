@@ -1,0 +1,9 @@
+from django.urls import include, path
+form . import views
+from django.contrib import admin
+
+urlpatterns = [
+    path('lib/', include('lib.urls')),
+    path('admin/', admin.site.urls),
+        
+]
